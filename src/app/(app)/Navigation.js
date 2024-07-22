@@ -31,10 +31,31 @@ const Navigation = ({ user }) => {
                         {/* Navigation Links */}
                         <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <NavLink
+                                href="/"
+                                active={usePathname() === '/'}>
+                                Home
+                            </NavLink>
+                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <NavLink
                                 href="/dashboard"
                                 active={usePathname() === '/dashboard'}>
                                 Dashboard
                             </NavLink>
+                            </div>
+                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <NavLink
+                                href="/technology"
+                                active={usePathname() === '/technology'}>
+                                Technology
+                            </NavLink>
+                            </div>
+                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <NavLink
+                                href="/architecture"
+                                active={usePathname() === '/architecture'}>
+                                Architecture
+                            </NavLink>
+                            </div>
                         </div>
                     </div>
 
@@ -104,11 +125,25 @@ const Navigation = ({ user }) => {
             {/* Responsive Navigation Menu */}
             {open && (
                 <div className="block sm:hidden">
-                    <div className="pt-2 pb-3 space-y-1">
+                    <div className="pt-2 space-y-1">
                         <ResponsiveNavLink
                             href="/dashboard"
                             active={usePathname() === '/dashboard'}>
                             Dashboard
+                        </ResponsiveNavLink>
+                    </div>
+                    <div className="">
+                        <ResponsiveNavLink
+                            href="/technology"
+                            active={usePathname() === '/technology'}>
+                            Technology
+                        </ResponsiveNavLink>
+                    </div>
+                    <div className="">
+                        <ResponsiveNavLink
+                            href="/architecture"
+                            active={usePathname() === '/architecture'}>
+                            Architecture
                         </ResponsiveNavLink>
                     </div>
 
