@@ -1,4 +1,4 @@
-const ApplicationLogo = props => (
+const ApplicationLogo  = (
     <img src="/images/logo-bws.png" alt="Big Wave Surf" className="logo" />
 )
 

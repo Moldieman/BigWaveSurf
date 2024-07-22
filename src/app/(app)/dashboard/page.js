@@ -1,19 +1,19 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
 import Header from '@/app/(app)/Header'
 
 const Dashboard = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({})
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://127.0.0.1:8000/api/waves/area/capepoint");
-      const json = await response.json();
-      setData(json);
-    };
+      const response = await fetch("http://127.0.0.1:8000/api/waves/area/capepoint")
+      const json = await response.json()
+      setData(json)
+    }
 
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   return (
     <div>
@@ -278,7 +278,7 @@ const Dashboard = () => {
             </div>
         </div>
     </div>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard
